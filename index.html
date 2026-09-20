@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thesis Defense | Aamin Ambulance Emergency Dispatch System</title>
+  <link rel="icon" href="images/aamin-icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Source+Sans+3:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/presentation.css" />
+</head>
+<body>
+  <div class="deck-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="images/aamin-ambulance-logo.png" alt="Aamin Ambulance" />
+        <div class="brand-meta">
+          <strong>Group Thesis Defense</strong>
+          Aamin Ambulance EADS · Jazeera University
+        </div>
+      </div>
+      <div class="progress-wrap"><div class="progress"><span id="progressBar"></span></div></div>
+      <div class="top-actions">
+        <span id="timer" class="icon-btn" title="Elapsed time">00:00</span>
+        <button class="icon-btn" id="tocBtn" type="button">Overview (O)</button>
+        <button class="icon-btn" id="notesBtn" type="button">Notes (N)</button>
+        <button class="icon-btn" id="fsBtn" type="button">Fullscreen (F)</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div class="slide-frame">
+        <div class="slides">
+
+          <!-- 1 TITLE -->
+          <section class="slide title-slide" data-title="Title" data-notes="Pause after the title. This is a group defense for the university president, deans, board, and examiners.">
+            <div class="crest">
+              <div>
+                <p class="uni">Jazeera University · Faculty of Computer Science and Information Technology</p>
+                <p class="kicker">Bachelor of Computer Science and IT · Group Thesis Defense · June 2026</p>
+              </div>
+              <img src="images/aamin-ambulance-logo.png" alt="Aamin logo" style="height:56px;background:#fff;border-radius:10px;padding:6px 12px" />
+            </div>
+            <div>
+              <h1 class="h1">Aamin Ambulance Emergency Dispatch System (EADS)</h1>
+              <div class="gold-line"></div>
+              <p class="lede" style="color:#e2e8f0;font-size:20px;max-width:920px">A working web platform that replaces Aamin’s paper books and Excel with digital ambulance requests, manual dispatch, crew coordination, and operational reports — for Somalia’s 24-hour free ambulance service.</p>
+              <div class="meta-row">
+                <div class="meta-chip"><strong>Thesis book:</strong> Aamin Ambulance Dispatch System (AADS)</div>
+                <div class="meta-chip"><strong>Partner:</strong> Aamin Ambulance, Mogadishu</div>
+                <div class="meta-chip"><strong>Supervisor:</strong> Eng. Jamila Hassan Mohamed</div>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:15px;opacity:.92;gap:16px;flex-wrap:wrap">
+              <span>Five candidates · CS1300655 · CS1300674 · CS1300680 · CS1300703 · CS1300718</span>
+              <span>Emergency hotline 999 · 3800</span>
+            </div>
+          </section>
+
+          <!-- 2 AGENDA -->
+          <section class="slide" data-title="Agenda" data-notes="Fifteen slides. Use the bottom selector at any time to jump. Click a card to go there now.">
+            <p class="kicker">Roadmap · 15 slides</p>
+            <h2 class="h2">Defense agenda</h2>
+            <p class="lede">A walkthrough of the live system. Use the <strong>bottom bar</strong> on every slide to select any page. Keyboard: ← → · O overview · F fullscreen.</p>
+            <div class="grid g4">
+              <button class="card hoverable" data-goto="0" type="button"><h3>01–04 · Opening</h3><p>System name, group candidates from the thesis book, and Aamin as it operates today.</p></button>
+              <button class="card hoverable red" data-goto="4" type="button"><h3>05 · Problem &amp; solution</h3><p>No digital dispatch today. Books, Excel, failing devices. EADS as the answer.</p></button>
+              <button class="card hoverable" data-goto="5" type="button"><h3>06 · Scope</h3><p>In scope includes the public blog. Out of scope: GPS, auto-matching, SMS, AI triage.</p></button>
+              <button class="card hoverable" data-goto="6" type="button"><h3>07 · Technology</h3><p>Next.js 14, NestJS, PostgreSQL, Prisma, JWT/RBAC, Socket.io.</p></button>
+              <button class="card hoverable navy-card" data-goto="7" type="button"><h3>08 · User roles</h3><p>Admin, Dispatcher, Driver, Nurse, and the public. Hospitals are a directory.</p></button>
+              <button class="card hoverable gold" data-goto="8" type="button"><h3>09 · Case workflow</h3><p>One complete emergency: request → assign → treat → handover → reports.</p></button>
+              <button class="card hoverable ok" data-goto="9" type="button"><h3>10–13 · Modules</h3><p>Two modules per slide, split by a vertical line. Field ops through reports.</p></button>
+              <button class="card hoverable" data-goto="14" type="button"><h3>15 · Close</h3><p>Thank you and questions from the panel.</p></button>
+            </div>
+          </section>
+
+          <!-- 3 GROUP -->
+          <section class="slide" data-title="Research group" data-notes="Read names and IDs from the thesis book. Owned by the group, not one person.">
+            <p class="kicker">Thesis book · declaration page</p>
+            <h2 class="h2">Group candidates</h2>
+            <p class="lede">Submitted in partial fulfilment of the Bachelor of Computer Science and IT, Jazeera University. Supervisor: <strong>Eng. Jamila Hassan Mohamed</strong> · June 2026.</p>
+            <div class="grid g2">
+              <table class="candidate-table">
+                <thead>
+                  <tr><th>#</th><th>Candidate (as printed in the book)</th><th>Student ID</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td><strong>Abdimajid Ali Moalim</strong></td><td>CS1300655</td></tr>
+                  <tr><td>2</td><td><strong>Ahmed Ibrahim Mahamud</strong></td><td>CS1300674</td></tr>
+                  <tr><td>3</td><td><strong>Anfac Abdiweli Hassan</strong></td><td>CS1300680</td></tr>
+                  <tr><td>4</td><td><strong>Mahamed Yusuf Maow</strong></td><td>CS1300703</td></tr>
+                  <tr><td>5</td><td><strong>Suweys Abdirizak Mahamud</strong></td><td>CS1300718</td></tr>
+                </tbody>
+              </table>
+              <div class="grid" style="gap:12px">
+                <div class="card navy-card">
+                  <h3>Group ownership</h3>
+                  <p>This defense, the thesis book, and the running software belong to the five candidates listed here. It is not an individual presentation.</p>
+                </div>
+                <div class="card">
+                  <h3>Field of study</h3>
+                  <ul class="list">
+                    <li>Web application development</li>
+                    <li>Partner organization: Aamin Ambulance, Mogadishu</li>
+                    <li>Artifact: the live EADS / AADS system</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4 ABOUT AAMIN -->
+          <section class="slide" data-title="About Aamin" data-notes="Aamin saves lives with 999. They still have no digital ambulance system.">
+            <p class="kicker">The organization</p>
+            <h2 class="h2">Aamin Ambulance — still without a dispatch system</h2>
+            <div class="grid g2">
+              <div>
+                <p class="lede" style="margin-bottom:12px">Aamin is a 24-hour free ambulance service in Mogadishu, founded in 2006 by Dr Abdulkadir Abdirahman Adan. It answers <strong>999</strong> and <strong>3800</strong>. What it does not have today is a digital ambulance information system.</p>
+                <div class="grid g3">
+                  <div class="stat"><span>Emergency hotline</span><b>999</b><small>also 3800</small></div>
+                  <div class="stat"><span>Operations</span><b>24/7</b><small>Free of charge</small></div>
+                  <div class="stat"><span>Dispatch today</span><b>Manual</b><small>Books + Excel</small></div>
+                </div>
+                <div class="card red" style="margin-top:14px">
+                  <h3>How work is done now</h3>
+                  <p>Cases are written in <strong>paper books</strong> and copied into <strong>Excel</strong>. Crews are reached by phone and radio. When a device fails, the desk loses the thread. Searching an old case means paging through notebooks — if the page still exists.</p>
+                </div>
+              </div>
+              <figure class="shot"><img src="images/hero/ambulance-services.png" alt="Aamin ambulance unit" /><figcaption>Field service is real. The information system is not — yet.</figcaption></figure>
+            </div>
+          </section>
+
+          <!-- 5 PROBLEM + SOLUTION -->
+          <section class="slide" data-title="Problem &amp; solution" data-notes="Left: how Aamin works today. Right: what EADS does. Keep this to two minutes.">
+            <p class="kicker">The gap and the answer</p>
+            <h2 class="h2">Problem and solution</h2>
+            <div class="split-vs">
+              <div class="card red">
+                <h3>Problem — Aamin today</h3>
+                <ul class="list">
+                  <li><strong>No ambulance system.</strong> Intake, assignment, and handover live outside software.</li>
+                  <li><strong>Books and Excel.</strong> Details are handwritten, retyped, then go stale.</li>
+                  <li><strong>Devices fail.</strong> Phones, radios, and office PCs drop; the case stops with them.</li>
+                  <li><strong>No search resource.</strong> Staff cannot quickly find a patient, a unit, or a past incident.</li>
+                  <li>No shared view of who is free. Hospital handover is informal. Delayed cases raise no alert.</li>
+                </ul>
+              </div>
+              <div class="vs-mark"><span>→</span>EADS</div>
+              <div class="card ok">
+                <h3>Solution — the live system</h3>
+                <ul class="list">
+                  <li><strong>Public request form</strong> and 999 desk logging create a tracked case <code>CASE-YYYY-####</code>.</li>
+                  <li><strong>Manual dispatch board.</strong> A human still assigns; software shows free units and coverage.</li>
+                  <li><strong>Driver and nurse portals</strong> with status taps, notes, handover, chat, and notifications.</li>
+                  <li><strong>Searchable history</strong> instead of notebooks — cases, crew, and activity in seconds.</li>
+                  <li><strong>Reports and blog</strong> for the board, donors, and the public — without GPS auto-matching.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6 SCOPE -->
+          <section class="slide" data-title="Scope" data-notes="Blog is in scope. Do not list payroll, inventory, or finance.">
+            <p class="kicker">Scope of the study</p>
+            <h2 class="h2">What this thesis covers — and what it does not</h2>
+            <div class="grid g2eq">
+              <div class="card ok">
+                <h3>In scope</h3>
+                <ul class="list">
+                  <li>Public website: home, <strong>request ambulance</strong>, tracking, <strong>blog</strong>, about, services, contact</li>
+                  <li>Admin console and dispatcher operations</li>
+                  <li>Driver portal and nurse Active Case workspace</li>
+                  <li>Emergency case lifecycle and status log</li>
+                  <li>Stations, fleet, employees, patients, hospital directory</li>
+                  <li>Role-based access, in-app communication, notifications</li>
+                  <li>Operational reports (PDF / Excel)</li>
+                  <li>Geographic focus: Banadir (Mogadishu)</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Out of scope (by design)</h3>
+                <ul class="list">
+                  <li>Live GPS map tracking of vehicles</li>
+                  <li>Automatic nearest-ambulance matching</li>
+                  <li>SMS / WhatsApp gateway</li>
+                  <li>Voice dispatch / radio integration</li>
+                  <li>AI triage or clinical decision engines</li>
+                </ul>
+                <div class="card gold" style="margin-top:12px">
+                  <h3>Significance</h3>
+                  <p>One searchable system instead of books and spreadsheets — a dispatch pattern that works without GPS infrastructure.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7 TECHNOLOGY -->
+          <section class="slide" data-title="Technology" data-notes="Book stack: Next.js 14.0.4, NestJS, PostgreSQL, Prisma, TypeScript.">
+            <p class="kicker">Development environment</p>
+            <h2 class="h2">Technology we used</h2>
+            <p class="lede">Chosen so each EMS domain is a module — not another Excel workbook.</p>
+            <div class="grid g3">
+              <div class="card"><h3>Next.js 14 · TypeScript</h3><p>App Router for the public site, admin console, and driver / nurse / dispatcher portals, with middleware for role redirects.</p></div>
+              <div class="card"><h3>NestJS API</h3><p>Modular REST backend (<code>/api</code> + Swagger). Emergency requests, fleet, stations, notifications, and chat each have a module.</p></div>
+              <div class="card"><h3>PostgreSQL + Prisma</h3><p>Relational integrity for cases, crew, stations, and audit logs. Schema is the contract with database <code>Aamin01</code>.</p></div>
+              <div class="card"><h3>JWT + RBAC</h3><p>bcrypt passwords, access and refresh tokens, permission grants. Job function lives on EmployeeRole.</p></div>
+              <div class="card"><h3>Socket.io</h3><p>Live mission status, in-app communication, and operational alerts — events, not a moving map.</p></div>
+              <div class="card"><h3>Reports &amp; UI</h3><p>Recharts dashboards; PDF / Excel export; Tailwind and shadcn/ui for a control-room interface.</p></div>
+            </div>
+            <div class="card" style="margin-top:14px">
+              <p><strong>Architecture:</strong> role UIs → NestJS API → PostgreSQL. Dispatch remains a human action. The stack only shortens the information loop.</p>
+            </div>
+          </section>
+
+          <!-- 8 ROLES -->
+          <section class="slide" data-title="User roles" data-notes="No personal emails. Hospitals are not logged-in users.">
+            <p class="kicker">Access control</p>
+            <h2 class="h2">User roles in EADS</h2>
+            <p class="lede">Four system accounts plus a public path — matching how Aamin works on the street.</p>
+            <div class="grid g3">
+              <div class="card navy-card"><h3>Administrator</h3><p>Full console: stations, fleet, employees, permissions, content, reports, and audit logs.</p></div>
+              <div class="card"><h3>Dispatcher</h3><p>Queue, triage, assign ambulance + driver + nurse, transfer stations, record hospital accept or refuse after the phone call.</p></div>
+              <div class="card"><h3>Driver</h3><p>Active Case status taps from assigned through hospital arrival. Simple field UI for unreliable devices.</p></div>
+              <div class="card"><h3>Nurse</h3><p>Active Case workspace: assessment, vitals, medical notes, load patient, handover, close with clinical evidence.</p></div>
+              <div class="card"><h3>Public / caller</h3><p>Request an ambulance and track by case code or phone. No account required. 999 callers are entered by the desk.</p></div>
+              <div class="card gold"><h3>Hospitals (not users)</h3><p>Directory of receiving facilities. Contact is outside EADS. The dispatcher records the outcome on the case.</p></div>
+            </div>
+          </section>
+
+          <!-- 9 WORKFLOW -->
+          <section class="slide" data-title="Case workflow" data-notes="Click each step. Step 1 is Request Ambulance. Walk the Hodan accident.">
+            <p class="kicker">Full case scenario — click each step</p>
+            <h2 class="h2">From 999 to case closed</h2>
+            <p class="lede"><strong>Scenario:</strong> A caller reports a traffic accident near Taleex, Hodan. Two injured. Priority HIGH. Destination: Shaafi Hospital.</p>
+            <div class="flow">
+              <div class="flow-step on" data-step="1"><div class="n">1</div><b>Call / request</b><span>999 or public form</span></div>
+              <div class="flow-step" data-step="2"><div class="n">2</div><b>Log case</b><span>CASE-YYYY-####</span></div>
+              <div class="flow-step" data-step="3"><div class="n">3</div><b>Triage</b><span>Priority + district</span></div>
+              <div class="flow-step" data-step="4"><div class="n">4</div><b>Assign</b><span>Station + crew</span></div>
+              <div class="flow-step" data-step="5"><div class="n">5</div><b>Respond</b><span>Driver status taps</span></div>
+              <div class="flow-step" data-step="6"><div class="n">6</div><b>Treat</b><span>Nurse notes</span></div>
+              <div class="flow-step" data-step="7"><div class="n">7</div><b>Handover</b><span>Hospital by phone</span></div>
+              <div class="flow-step" data-step="8"><div class="n">8</div><b>Close</b><span>Reports + alerts</span></div>
+            </div>
+            <div class="flow-detail" id="flowDetail">
+              <strong>1. Call / request</strong>
+              <p>The public submits Request Ambulance, or the 999 desk takes the call. Source is PHONE_CALL, WEBSITE, WALK_IN, STAFF, REFERRAL or OTHER. The paper book is no longer the first record.</p>
+            </div>
+            <p class="lede" style="margin:12px 0 6px">Statuses shown on the case</p>
+            <div class="badge-row">
+              <span class="badge b-pending">PENDING</span>
+              <span class="badge b-pending">REVIEWING</span>
+              <span class="badge b-assigned">ASSIGNED</span>
+              <span class="badge b-assigned">DISPATCHED</span>
+              <span class="badge b-done">COMPLETED</span>
+              <span class="badge b-crit">CANCELLED</span>
+              <span class="badge b-crit">Priority: LOW → CRITICAL</span>
+            </div>
+          </section>
+
+          <!-- 10 MODULES: Field Operations | Driver -->
+          <section class="slide" data-title="Field Operations &amp; Driver" data-notes="Left: Field Operations. Right: Driver. Pause on the vertical line so the panel sees they are two modules.">
+            <p class="kicker">System modules · 1 of 4</p>
+            <h2 class="h2">Field Operations and Driver</h2>
+            <div class="module-split">
+              <article class="module-pane">
+                <p class="tag">Module 1</p>
+                <h3>Field Operations</h3>
+                <p class="lede">The station desk: who is free, and which cases are waiting.</p>
+                <ol>
+                  <li><strong>Station Resources.</strong> One screen for drivers, nurses, and ambulances at the covering station — so assignment is not a radio round.</li>
+                  <li><strong>Case queues.</strong> Pending, critical, delayed / escalated, and triage sit on the same board for the dispatcher on duty.</li>
+                </ol>
+              </article>
+              <div class="module-vline" aria-hidden="true"></div>
+              <article class="module-pane">
+                <p class="tag">Module 2</p>
+                <h3>Driver</h3>
+                <p class="lede">Field portal built for a phone that may fail mid-shift.</p>
+                <ol>
+                  <li><strong>Active Case.</strong> Accept the mission and tap status until the case is completed. Each tap is stored on the case log.</li>
+                  <li><strong>Communication.</strong> In-app chat and notifications keep the driver linked to dispatch when radio or the device drops.</li>
+                </ol>
+              </article>
+            </div>
+          </section>
+
+          <!-- 11 MODULES: Nurse | Dispatcher -->
+          <section class="slide" data-title="Nurse &amp; Dispatcher" data-notes="Left: Nurse Active Case. Right: Dispatcher command board.">
+            <p class="kicker">System modules · 2 of 4</p>
+            <h2 class="h2">Nurse and Dispatcher</h2>
+            <div class="module-split">
+              <article class="module-pane">
+                <p class="tag">Module 1</p>
+                <h3>Nurse</h3>
+                <p class="lede">Clinical work happens on Active Case — not on paper in the ambulance.</p>
+                <ol>
+                  <li><strong>Active Case.</strong> Assessment, vitals, medical notes, load patient, and handover. Notes update in place; they are not duplicated.</li>
+                  <li><strong>Hospitals and history.</strong> Directory lookup for the receiving facility, plus a searchable case history after the shift.</li>
+                </ol>
+              </article>
+              <div class="module-vline" aria-hidden="true"></div>
+              <article class="module-pane">
+                <p class="tag">Module 2</p>
+                <h3>Dispatcher</h3>
+                <p class="lede">Humans assign. Software shows the queue and the crew.</p>
+                <ol>
+                  <li><strong>Dispatch board.</strong> New case, pending queue, then assign ambulance + driver + nurse. Never automatic matching.</li>
+                  <li><strong>Mission watch.</strong> Follow the case through handover and completed or cancelled — with a reason stored, not lost on a sticky note.</li>
+                </ol>
+              </article>
+            </div>
+          </section>
+
+          <!-- 12 MODULES: Ambulance | Content -->
+          <section class="slide" data-title="Ambulance &amp; Content" data-notes="Left: fleet. Right: Content Management blog.">
+            <p class="kicker">System modules · 3 of 4</p>
+            <h2 class="h2">Ambulance and Content Management</h2>
+            <div class="module-split">
+              <article class="module-pane">
+                <p class="tag">Module 1</p>
+                <h3>Ambulance</h3>
+                <p class="lede">Fleet truth instead of an Excel tab of plate numbers.</p>
+                <ol>
+                  <li><strong>Register and availability.</strong> Add units and see which ambulances are free versus on duty before anyone is assigned.</li>
+                  <li><strong>History and reports.</strong> Which unit ran which case, and when a vehicle was unavailable or in maintenance.</li>
+                </ol>
+              </article>
+              <div class="module-vline" aria-hidden="true"></div>
+              <article class="module-pane">
+                <p class="tag">Module 2</p>
+                <h3>Content Management</h3>
+                <p class="lede">In-scope public content — the blog is part of this thesis, not an extra website.</p>
+                <ol>
+                  <li><strong>Create and publish.</strong> Admin writes posts from Content Management: title, body, image, publish or draft.</li>
+                  <li><strong>Public blog.</strong> The same posts appear on the Aamin public site for news and health education.</li>
+                </ol>
+              </article>
+            </div>
+          </section>
+
+          <!-- 13 MODULES: Reports | Notifications -->
+          <section class="slide" data-title="Reports &amp; Notifications" data-notes="Left: Reports. Right: Notifications. Vertical line between them.">
+            <p class="kicker">System modules · 4 of 4</p>
+            <h2 class="h2">Reports and Notifications</h2>
+            <div class="module-split">
+              <article class="module-pane">
+                <p class="tag">Module 1</p>
+                <h3>Reports</h3>
+                <p class="lede">Printable evidence for the board, donors, and examiners.</p>
+                <ol>
+                  <li><strong>Operations intelligence.</strong> Emergency reports, ambulance utilization, staff performance, hospital acceptance, response time, and handover outcomes.</li>
+                  <li><strong>Export PDF / Excel.</strong> Period reports leave as files — not as a lost spreadsheet on one desk PC.</li>
+                </ol>
+              </article>
+              <div class="module-vline" aria-hidden="true"></div>
+              <article class="module-pane">
+                <p class="tag">Module 2</p>
+                <h3>Notifications</h3>
+                <p class="lede">Staff are told when a case is critical or delayed — even if they are not on the dashboard.</p>
+                <ol>
+                  <li><strong>Inbox and broadcasts.</strong> Assignments, critical cases, delayed missions, and station-wide messages.</li>
+                  <li><strong>Live alerts.</strong> Mission toasts on a 5-minute cadence so the desk is not flooded every second.</li>
+                </ol>
+              </article>
+            </div>
+          </section>
+
+          <!-- 14 DELIVERED -->
+          <section class="slide" data-title="What we delivered" data-notes="Restate the academic claim in one breath. Invite the live demo if asked.">
+            <p class="kicker">Contribution</p>
+            <h2 class="h2">What this thesis delivered</h2>
+            <div class="grid g2">
+              <div class="card navy-card">
+                <h3>The claim</h3>
+                <p>EADS is a working emergency operations platform for Aamin Ambulance. It turns a 999 call or a public request into a tracked case, a manual crew assignment, a hospital handover, and a signed report — while keeping humans in charge of dispatch.</p>
+                <p style="margin-top:12px">The academic claim is modest and true: <strong>digitizing dispatch information, without GPS auto-matching, is the right architecture for Somali EMS today.</strong></p>
+              </div>
+              <div>
+                <div class="grid g2eq">
+                  <div class="stat"><span>Public path</span><b>Request</b><small>form + tracking code</small></div>
+                  <div class="stat"><span>Field portals</span><b>3</b><small>Dispatcher · Driver · Nurse</small></div>
+                  <div class="stat"><span>Core modules</span><b>7</b><small>ops, crew, fleet, content, reports</small></div>
+                  <div class="stat"><span>Hotline aligned</span><b>999</b><small>+ 3800</small></div>
+                </div>
+                <div class="card ok" style="margin-top:14px">
+                  <p>Aamin no longer has to keep the mission in a book, an Excel file, and whoever answered the radio.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 15 THANK YOU -->
+          <section class="slide title-slide" data-title="Thank you" data-notes="Stop talking. Wait. Offer a live demo of Request Ambulance, the dispatch board, or a PDF report.">
+            <div class="crest">
+              <p class="uni">Jazeera University · Faculty of Computer Science and Information Technology · 2026</p>
+              <img src="images/aamin-ambulance-logo.png" alt="Aamin" style="height:52px;background:#fff;border-radius:10px;padding:6px 12px" />
+            </div>
+            <div>
+              <p class="kicker">End of presentation · group thesis</p>
+              <h1 class="h1">Thank you. Questions?</h1>
+              <div class="gold-line"></div>
+              <p class="lede" style="color:#e2e8f0;font-size:20px">Aamin Ambulance Emergency Dispatch System (EADS)</p>
+              <div class="meta-row">
+                <div class="meta-chip">Abdimajid Ali Moalim · CS1300655</div>
+                <div class="meta-chip">Ahmed Ibrahim Mahamud · CS1300674</div>
+                <div class="meta-chip">Anfac Abdiweli Hassan · CS1300680</div>
+                <div class="meta-chip">Mahamed Yusuf Maow · CS1300703</div>
+                <div class="meta-chip">Suweys Abdirizak Mahamud · CS1300718</div>
+              </div>
+              <div class="meta-row">
+                <div class="meta-chip"><strong>Supervisor:</strong> Eng. Jamila Hassan Mohamed</div>
+                <div class="meta-chip">Hotline 999 · 3800</div>
+                <div class="meta-chip">Select any slide from the bar below</div>
+              </div>
+            </div>
+            <p style="opacity:.9;font-size:16px">“Commitment: to save life and provide the highest quality pre-hospital emergency service.” — Aamin Ambulance</p>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <div class="notes" id="speakerNotes"></div>
+
+    <footer class="footer-nav">
+      <div class="slide-picker">
+        <label class="sr-only" for="slideSelect" style="position:absolute;left:-9999px">Select slide</label>
+        <select id="slideSelect" class="slide-select" aria-label="Select a slide"></select>
+      </div>
+      <div>
+        <div class="slide-dots" id="slideDots"></div>
+        <div style="text-align:center;margin-top:4px" class="slide-num" id="slideCounter">1 / 15</div>
+      </div>
+      <div class="nav-btns">
+        <button id="prevBtn" type="button">Previous</button>
+        <button id="nextBtn" type="button">Next</button>
+      </div>
+    </footer>
+  </div>
+
+  <aside class="toc" id="toc">
+    <h2>Overview <button class="icon-btn" id="closeToc" type="button">Close</button></h2>
+    <div class="toc-grid" id="tocGrid"></div>
+  </aside>
+
+  <div class="lightbox" id="lightbox"><img id="lightboxImg" alt="Screenshot" /></div>
+  <script src="js/presentation.js"></script>
+</body>
+</html>
