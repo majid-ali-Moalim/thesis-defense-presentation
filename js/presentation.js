@@ -6,46 +6,10 @@
   const notes = document.getElementById("speakerNotes");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
-  const flowDetail = document.getElementById("flowDetail");
   const timerEl = document.getElementById("timer");
   let index = 0;
   let start = Date.now();
   let notesOn = false;
-
-  const flowCopy = {
-    1: {
-      t: "1. Call / request",
-      d: "Scenario: traffic accident near Taleex, Hodan. The public submits Request Ambulance, or the 999 desk takes the call. Source is PHONE_CALL, WEBSITE, WALK_IN, STAFF, REFERRAL or OTHER. The paper book is no longer the first record.",
-    },
-    2: {
-      t: "2. Log the case",
-      d: "EADS creates EmergencyRequest with tracking code CASE-YYYY-####. Pickup is captured as region, district, landmark, and free-text address — not GPS. Patient details and incident category are stored so the case can be searched later.",
-    },
-    3: {
-      t: "3. Triage",
-      d: "The case sits in PENDING / REVIEWING. The dispatcher sets priority LOW, MEDIUM, HIGH or CRITICAL, confirms district coverage, and chooses a destination hospital as a directory record. Notifications already show the new HIGH case.",
-    },
-    4: {
-      t: "4. Manual assignment",
-      d: "Dispatcher assigns the covering station, an available ambulance, a driver, and a nurse. Assignment is never automatic. Busy units are excluded. If Hodan is out of coverage, a station transfer is logged with a reason.",
-    },
-    5: {
-      t: "5. Field response",
-      d: "The driver opens Active Case, accepts the mission, and taps status until the job is done. Each tap writes a case log and updates dispatch and public tracking — even if the radio fails.",
-    },
-    6: {
-      t: "6. On-scene care",
-      d: "The nurse opens Active Case: assessment, vitals, pain scale, medical notes, then Load patient. Notes update in place. The driver does not start hospital transport until the nurse has loaded the patient.",
-    },
-    7: {
-      t: "7. Transport & handover",
-      d: "The crew takes the patient to hospital. The dispatcher phones Shaafi Hospital (hospitals are not system users) and records accept or refuse on the case. The nurse completes handover: living/deceased, destination, clinical summary.",
-    },
-    8: {
-      t: "8. Close & evidence",
-      d: "The case is COMPLETED (or CANCELLED with a reason). Response and service minutes are stored. Operations, station, and handover reports can be exported to PDF/Excel. The activity log remains searchable — the resource Aamin did not have on paper.",
-    },
-  };
 
   function show(i, hash = true) {
     index = (i + slides.length) % slides.length;
@@ -190,16 +154,6 @@
     });
   });
   lightbox?.addEventListener("click", () => lightbox.classList.remove("open"));
-
-  document.querySelectorAll(".flow-step").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".flow-step").forEach((b) => b.classList.remove("on"));
-      btn.classList.add("on");
-      const id = btn.dataset.step;
-      const item = flowCopy[id];
-      if (item && flowDetail) flowDetail.innerHTML = `<strong>${item.t}</strong><p>${item.d}</p>`;
-    });
-  });
 
   document.querySelectorAll("[data-tabs]").forEach((root) => {
     const tabs = [...root.querySelectorAll(".tab")];

@@ -69,7 +69,7 @@
               <button class="card hoverable" data-goto="5" type="button"><h3>06 · Scope</h3><p>In scope includes the public blog. Out of scope: GPS, auto-matching, SMS, AI triage.</p></button>
               <button class="card hoverable" data-goto="6" type="button"><h3>07 · Technology</h3><p>Next.js 14, NestJS, PostgreSQL, Prisma, JWT/RBAC, Socket.io.</p></button>
               <button class="card hoverable navy-card" data-goto="7" type="button"><h3>08 · User roles</h3><p>Admin, Dispatcher, Driver, Nurse, and the public. Hospitals are a directory.</p></button>
-              <button class="card hoverable gold" data-goto="8" type="button"><h3>09 · Case workflow</h3><p>One complete emergency: request → assign → treat → handover → reports.</p></button>
+              <button class="card hoverable gold" data-goto="8" type="button"><h3>09 · Case workflow</h3><p>Full AADS workflow diagram: 999 call through case closed and reports.</p></button>
               <button class="card hoverable ok" data-goto="9" type="button"><h3>10–13 · Modules</h3><p>Two modules per slide, split by a vertical line. Field ops through reports.</p></button>
               <button class="card hoverable" data-goto="14" type="button"><h3>15 · Close</h3><p>Thank you and questions from the panel.</p></button>
             </div>
@@ -229,34 +229,10 @@
           </section>
 
           <!-- 9 WORKFLOW -->
-          <section class="slide" data-title="Case workflow" data-notes="Click each step. Step 1 is Request Ambulance. Walk the Hodan accident.">
-            <p class="kicker">Full case scenario — click each step</p>
-            <h2 class="h2">From 999 to case closed</h2>
-            <p class="lede"><strong>Scenario:</strong> A caller reports a traffic accident near Taleex, Hodan. Two injured. Priority HIGH. Destination: Shaafi Hospital.</p>
-            <div class="flow">
-              <div class="flow-step on" data-step="1"><div class="n">1</div><b>Call / request</b><span>999 or public form</span></div>
-              <div class="flow-step" data-step="2"><div class="n">2</div><b>Log case</b><span>CASE-YYYY-####</span></div>
-              <div class="flow-step" data-step="3"><div class="n">3</div><b>Triage</b><span>Priority + district</span></div>
-              <div class="flow-step" data-step="4"><div class="n">4</div><b>Assign</b><span>Station + crew</span></div>
-              <div class="flow-step" data-step="5"><div class="n">5</div><b>Respond</b><span>Driver status taps</span></div>
-              <div class="flow-step" data-step="6"><div class="n">6</div><b>Treat</b><span>Nurse notes</span></div>
-              <div class="flow-step" data-step="7"><div class="n">7</div><b>Handover</b><span>Hospital by phone</span></div>
-              <div class="flow-step" data-step="8"><div class="n">8</div><b>Close</b><span>Reports + alerts</span></div>
-            </div>
-            <div class="flow-detail" id="flowDetail">
-              <strong>1. Call / request</strong>
-              <p>The public submits Request Ambulance, or the 999 desk takes the call. Source is PHONE_CALL, WEBSITE, WALK_IN, STAFF, REFERRAL or OTHER. The paper book is no longer the first record.</p>
-            </div>
-            <p class="lede" style="margin:12px 0 6px">Statuses shown on the case</p>
-            <div class="badge-row">
-              <span class="badge b-pending">PENDING</span>
-              <span class="badge b-pending">REVIEWING</span>
-              <span class="badge b-assigned">ASSIGNED</span>
-              <span class="badge b-assigned">DISPATCHED</span>
-              <span class="badge b-done">COMPLETED</span>
-              <span class="badge b-crit">CANCELLED</span>
-              <span class="badge b-crit">Priority: LOW → CRITICAL</span>
-            </div>
+          <section class="slide slide-workflow" data-title="Case workflow" data-notes="Walk the 10-step diagram from the 999 call to reports. Click the image to enlarge.">
+            <figure class="workflow-figure zoomable">
+              <img src="images/aads-full-workflow.jpg" alt="Aamin Ambulance Dispatch System full workflow from 999 to case closed, with user roles and request categories" />
+            </figure>
           </section>
 
           <!-- 10 MODULES: Field Operations | Driver -->
