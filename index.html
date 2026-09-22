@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thesis Defense | Aamin Ambulance Emergency Dispatch System</title>
+  <title>Thesis Defense | Aamin Ambulance Dispatch System (AADS)</title>
   <link rel="icon" href="images/aamin-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
         <img src="images/aamin-ambulance-logo.png" alt="Aamin Ambulance" />
         <div class="brand-meta">
           <strong>Group Thesis Defense</strong>
-          Aamin Ambulance EADS · Jazeera University
+          Aamin Ambulance AADS · Jazeera University
         </div>
       </div>
       <div class="progress-wrap"><div class="progress"><span id="progressBar"></span></div></div>
@@ -43,7 +43,7 @@
               <img src="images/aamin-ambulance-logo.png" alt="Aamin logo" style="height:56px;background:#fff;border-radius:10px;padding:6px 12px" />
             </div>
             <div>
-              <h1 class="h1">Aamin Ambulance Emergency Dispatch System (EADS)</h1>
+              <h1 class="h1">Aamin Ambulance Dispatch System (AADS)</h1>
               <div class="gold-line"></div>
               <p class="lede" style="color:#e2e8f0;font-size:20px;max-width:920px">A working web platform that replaces Aamin’s paper books and Excel with digital ambulance requests, manual dispatch, crew coordination, and operational reports — for Somalia’s 24-hour free ambulance service.</p>
               <div class="meta-row">
@@ -65,7 +65,7 @@
             <p class="lede">A walkthrough of the live system. Use the <strong>bottom bar</strong> on every slide to select any page. Keyboard: ← → · O overview · F fullscreen.</p>
             <div class="grid g4">
               <button class="card hoverable" data-goto="0" type="button"><h3>01–04 · Opening</h3><p>System name, group candidates from the thesis book, and Aamin as it operates today.</p></button>
-              <button class="card hoverable red" data-goto="4" type="button"><h3>05 · Problem &amp; solution</h3><p>No digital dispatch today. Books, Excel, failing devices. EADS as the answer.</p></button>
+              <button class="card hoverable red" data-goto="4" type="button"><h3>05 · Problem &amp; solution</h3><p>No digital dispatch today. Books, Excel, failing devices. AADS as the answer.</p></button>
               <button class="card hoverable" data-goto="5" type="button"><h3>06 · Scope</h3><p>In scope includes the public blog. Out of scope: GPS, auto-matching, SMS, AI triage.</p></button>
               <button class="card hoverable" data-goto="6" type="button"><h3>07 · Technology</h3><p>Next.js 14, NestJS, PostgreSQL, Prisma, JWT/RBAC, Socket.io.</p></button>
               <button class="card hoverable navy-card" data-goto="7" type="button"><h3>08 · User roles</h3><p>Admin, Dispatcher, Driver, Nurse, and the public. Hospitals are a directory.</p></button>
@@ -103,7 +103,7 @@
                   <ul class="list">
                     <li>Web application development</li>
                     <li>Partner organization: Aamin Ambulance, Mogadishu</li>
-                    <li>Artifact: the live EADS / AADS system</li>
+                    <li>Artifact: the live AADS system</li>
                   </ul>
                 </div>
               </div>
@@ -132,7 +132,7 @@
           </section>
 
           <!-- 5 PROBLEM + SOLUTION -->
-          <section class="slide" data-title="Problem &amp; solution" data-notes="Left: how Aamin works today. Right: what EADS does. Keep this to two minutes.">
+          <section class="slide" data-title="Problem &amp; solution" data-notes="Left: how Aamin works today. Right: what AADS does. Keep this to two minutes.">
             <p class="kicker">The gap and the answer</p>
             <h2 class="h2">Problem and solution</h2>
             <div class="split-vs">
@@ -146,7 +146,7 @@
                   <li>No shared view of who is free. Hospital handover is informal. Delayed cases raise no alert.</li>
                 </ul>
               </div>
-              <div class="vs-mark"><span>→</span>EADS</div>
+              <div class="vs-mark"><span>→</span>AADS</div>
               <div class="card ok">
                 <h3>Solution — the live system</h3>
                 <ul class="list">
@@ -216,7 +216,7 @@
           <!-- 8 ROLES -->
           <section class="slide" data-title="User roles" data-notes="No personal emails. Hospitals are not logged-in users.">
             <p class="kicker">Access control</p>
-            <h2 class="h2">User roles in EADS</h2>
+            <h2 class="h2">User roles in AADS</h2>
             <p class="lede">Four system accounts plus a public path — matching how Aamin works on the street.</p>
             <div class="grid g3">
               <div class="card navy-card"><h3>Administrator</h3><p>Full console: stations, fleet, employees, permissions, content, reports, and audit logs.</p></div>
@@ -224,12 +224,13 @@
               <div class="card"><h3>Driver</h3><p>Active Case status taps from assigned through hospital arrival. Simple field UI for unreliable devices.</p></div>
               <div class="card"><h3>Nurse</h3><p>Active Case workspace: assessment, vitals, medical notes, load patient, handover, close with clinical evidence.</p></div>
               <div class="card"><h3>Public / caller</h3><p>Request an ambulance and track by case code or phone. No account required. 999 callers are entered by the desk.</p></div>
-              <div class="card gold"><h3>Hospitals (not users)</h3><p>Directory of receiving facilities. Contact is outside EADS. The dispatcher records the outcome on the case.</p></div>
+              <div class="card gold"><h3>Hospitals (not users)</h3><p>Directory of receiving facilities. Contact is outside AADS. The dispatcher records the outcome on the case.</p></div>
             </div>
           </section>
 
           <!-- 9 WORKFLOW -->
-          <section class="slide slide-workflow" data-title="Case workflow" data-notes="Walk the 10-step diagram from the 999 call to reports. Click the image to enlarge.">
+          <section class="slide slide-workflow" data-title="Case workflow" data-notes="Walk the 10-step AADS diagram from the 999 call to reports. Click the image to enlarge.">
+            <p class="kicker">Full case scenario — click each step</p>
             <figure class="workflow-figure zoomable">
               <img src="images/aads-full-workflow.jpg" alt="Aamin Ambulance Dispatch System full workflow from 999 to case closed, with user roles and request categories" />
             </figure>
@@ -350,7 +351,7 @@
             <div class="grid g2">
               <div class="card navy-card">
                 <h3>The claim</h3>
-                <p>EADS is a working emergency operations platform for Aamin Ambulance. It turns a 999 call or a public request into a tracked case, a manual crew assignment, a hospital handover, and a signed report — while keeping humans in charge of dispatch.</p>
+                <p>AADS is a working emergency operations platform for Aamin Ambulance. It turns a 999 call or a public request into a tracked case, a manual crew assignment, a hospital handover, and a signed report — while keeping humans in charge of dispatch.</p>
                 <p style="margin-top:12px">The academic claim is modest and true: <strong>digitizing dispatch information, without GPS auto-matching, is the right architecture for Somali EMS today.</strong></p>
               </div>
               <div>
@@ -377,7 +378,7 @@
               <p class="kicker">End of presentation · group thesis</p>
               <h1 class="h1">Thank you. Questions?</h1>
               <div class="gold-line"></div>
-              <p class="lede" style="color:#e2e8f0;font-size:20px">Aamin Ambulance Emergency Dispatch System (EADS)</p>
+              <p class="lede" style="color:#e2e8f0;font-size:20px">Aamin Ambulance Dispatch System (AADS)</p>
               <div class="meta-row">
                 <div class="meta-chip">Abdimajid Ali Moalim · CS1300655</div>
                 <div class="meta-chip">Ahmed Ibrahim Mahamud · CS1300674</div>

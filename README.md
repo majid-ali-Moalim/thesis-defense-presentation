@@ -1,6 +1,13 @@
 # Thesis Defense Presentation
 
-Group thesis defense deck for the **Aamin Ambulance Emergency Dispatch System (EADS)** — Jazeera University, Faculty of Computer Science and Information Technology.
+Group thesis defense deck for the **Aamin Ambulance Dispatch System (AADS)** — Jazeera University, Faculty of Computer Science and Information Technology.
+
+## Live site (public)
+
+- **Vercel:** https://thesis-defense-presentation.vercel.app
+- **GitHub:** https://github.com/majid-ali-Moalim/thesis-defense-presentation
+
+Anyone can open the Vercel URL. Deployment Protection (SSO login) is turned **off**.
 
 ## Open locally
 
@@ -10,8 +17,6 @@ Open `index.html` in a browser, or serve the folder:
 npx --yes serve .
 ```
 
-Then go to the printed local URL.
-
 ## Controls
 
 - **Bottom bar:** choose any slide from the dropdown or numbered buttons
@@ -19,7 +24,3 @@ Then go to the printed local URL.
 - **O** overview
 - **F** fullscreen
 - **N** speaker notes
-
-## Repository
-
-https://github.com/majid-ali-Moalim/thesis-defense-presentation

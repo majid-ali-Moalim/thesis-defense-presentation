@@ -116,8 +116,11 @@ img { max-width: 100%; display: block; }
 }
 .slide.active { display: flex; flex-direction: column; }
 .slide-workflow {
-  padding: 10px 12px;
+  padding: 16px 18px 10px;
   overflow: hidden;
+}
+.slide-workflow .kicker {
+  margin-bottom: 8px;
 }
 .workflow-figure {
   flex: 1;
