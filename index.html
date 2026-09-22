@@ -59,8 +59,8 @@
           </section>
 
           <!-- 2 AGENDA -->
-          <section class="slide" data-title="Agenda" data-notes="Fifteen slides. Use the bottom selector at any time to jump. Click a card to go there now.">
-            <p class="kicker">Roadmap · 15 slides</p>
+          <section class="slide" data-title="Agenda" data-notes="Sixteen slides. Use the bottom selector at any time to jump. Click a card to go there now.">
+            <p class="kicker">Roadmap · 16 slides</p>
             <h2 class="h2">Defense agenda</h2>
             <p class="lede">A walkthrough of the live system. Use the <strong>bottom bar</strong> on every slide to select any page. Keyboard: ← → · O overview · F fullscreen.</p>
             <div class="grid g4">
@@ -70,8 +70,9 @@
               <button class="card hoverable" data-goto="6" type="button"><h3>07 · Technology</h3><p>Next.js 14, NestJS, PostgreSQL, Prisma, JWT/RBAC, Socket.io.</p></button>
               <button class="card hoverable navy-card" data-goto="7" type="button"><h3>08 · User roles</h3><p>Admin, Dispatcher, Driver, Nurse, and the public. Hospitals are a directory.</p></button>
               <button class="card hoverable gold" data-goto="8" type="button"><h3>09 · Case workflow</h3><p>Full AADS workflow diagram: 999 call through case closed and reports.</p></button>
-              <button class="card hoverable ok" data-goto="9" type="button"><h3>10–13 · Modules</h3><p>Two modules per slide, split by a vertical line. Field ops through reports.</p></button>
-              <button class="card hoverable" data-goto="14" type="button"><h3>15 · Close</h3><p>Thank you and questions from the panel.</p></button>
+              <button class="card hoverable navy-card" data-goto="9" type="button"><h3>10 · Stations</h3><p>Station structure and Mogadishu coverage map.</p></button>
+              <button class="card hoverable ok" data-goto="10" type="button"><h3>11–14 · Modules</h3><p>Two modules per slide, split by a vertical line. Field ops through reports.</p></button>
+              <button class="card hoverable" data-goto="15" type="button"><h3>16 · Close</h3><p>Thank you and questions from the panel.</p></button>
             </div>
           </section>
 
@@ -229,14 +230,20 @@
           </section>
 
           <!-- 9 WORKFLOW -->
-          <section class="slide slide-workflow" data-title="Case workflow" data-notes="Walk the 10-step AADS diagram from the 999 call to reports. Click the image to enlarge.">
-            <p class="kicker">Full case scenario — click each step</p>
-            <figure class="workflow-figure zoomable">
+          <section class="slide slide-figure" data-title="Case workflow" data-notes="Walk the 10-step AADS diagram from the 999 call to reports. Click the image to enlarge.">
+            <figure class="figure-fill zoomable">
               <img src="images/aads-full-workflow.jpg" alt="Aamin Ambulance Dispatch System full workflow from 999 to case closed, with user roles and request categories" />
             </figure>
           </section>
 
-          <!-- 10 MODULES: Field Operations | Driver -->
+          <!-- 10 STATIONS -->
+          <section class="slide slide-figure" data-title="Station coverage" data-notes="Walk the five Mogadishu stations, home districts, and coverage districts. Click the image to enlarge.">
+            <figure class="figure-fill zoomable">
+              <img src="images/aads-station-coverage.jpg" alt="AADS station structure and Mogadishu station coverage map" />
+            </figure>
+          </section>
+
+          <!-- 11 MODULES: Field Operations | Driver -->
           <section class="slide" data-title="Field Operations &amp; Driver" data-notes="Left: Field Operations. Right: Driver. Pause on the vertical line so the panel sees they are two modules.">
             <p class="kicker">System modules · 1 of 4</p>
             <h2 class="h2">Field Operations and Driver</h2>
@@ -408,7 +415,7 @@
       </div>
       <div>
         <div class="slide-dots" id="slideDots"></div>
-        <div style="text-align:center;margin-top:4px" class="slide-num" id="slideCounter">1 / 15</div>
+        <div style="text-align:center;margin-top:4px" class="slide-num" id="slideCounter">1 / 16</div>
       </div>
       <div class="nav-btns">
         <button id="prevBtn" type="button">Previous</button>
