@@ -138,6 +138,8 @@ img { max-width: 100%; display: block; }
   max-height: none;
   object-fit: cover;
   object-position: center;
+  transform: scale(0.88);
+  transform-origin: center center;
   display: block;
   background: #fff;
   cursor: zoom-in;
