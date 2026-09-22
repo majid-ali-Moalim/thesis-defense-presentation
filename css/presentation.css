@@ -126,21 +126,35 @@ img { max-width: 100%; display: block; }
   height: 100%;
   min-height: 0;
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  position: relative;
 }
 .slide-figure .figure-fill img {
-  flex: 1;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-width: 0;
-  min-height: 0;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   object-position: center;
   display: block;
   background: #fff;
   cursor: zoom-in;
+}
+
+/* Diagram slides use the full stage, not the 1280px / 16:9 card. */
+.deck-shell--figure .stage {
+  padding: 0;
+  place-items: stretch;
+}
+.deck-shell--figure .slide-frame {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  aspect-ratio: auto;
+  border-radius: 0;
+  box-shadow: none;
 }
 .slide.title-slide {
   background:
@@ -658,6 +672,7 @@ img { max-width: 100%; display: block; }
   .slide { padding: 18px; overflow: auto; }
   .slide-figure { padding: 0; overflow: hidden; }
   .slide-frame { aspect-ratio: auto; height: calc(100vh - 148px); }
+  .deck-shell--figure .slide-frame { width: 100%; height: 100%; max-height: none; }
 }
 @media print {
   body { background: #fff; overflow: visible; }

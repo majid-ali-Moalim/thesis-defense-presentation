@@ -18,6 +18,10 @@
     if (progress) progress.style.width = pct + "%";
     if (counter) counter.textContent = `${index + 1} / ${slides.length}`;
     if (hash) history.replaceState(null, "", `#${index + 1}`);
+    document.querySelector(".deck-shell")?.classList.toggle(
+      "deck-shell--figure",
+      slides[index].classList.contains("slide-figure"),
+    );
     animateBars();
     animateStats();
     syncPicker();
