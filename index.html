@@ -230,17 +230,147 @@
           </section>
 
           <!-- 9 WORKFLOW -->
-          <section class="slide slide-figure" data-title="Case workflow" data-notes="Walk the 10-step AADS diagram from the 999 call to reports. Click the image to enlarge.">
-            <figure class="figure-fill zoomable">
-              <img src="images/aads-full-workflow.jpg" alt="Aamin Ambulance Dispatch System full workflow from 999 to case closed, with user roles and request categories" />
-            </figure>
+          <section class="slide slide-figure" data-title="Case workflow" data-notes="Walk the 10-step AADS diagram from the 999 call to reports. Every box is on this page.">
+            <div class="diagram diagram-workflow">
+              <header class="diagram-head">
+                <img src="images/aamin-ambulance-logo.png" alt="Aamin Ambulance" />
+                <div>
+                  <h2>Aamin Ambulance Dispatch System (AADS)</h2>
+                  <p>Full workflow: from 999 to case closed</p>
+                  <small>Faster response · Better coordination · Improved patient outcomes</small>
+                </div>
+              </header>
+              <div class="wf-grid">
+                <article class="wf-card"><span>1</span><h3>Emergency call (999)</h3><p>The caller dials 999. The dispatcher collects caller, patient, and location details (region, district, area, landmark).</p></article>
+                <article class="wf-card"><span>2</span><h3>Case registration</h3><p>The system creates a new case with a tracking code, timestamp, priority, and initial status (Pending).</p></article>
+                <article class="wf-card"><span>3</span><h3>Dispatcher review</h3><p>The dispatcher reviews the case, checks available ambulances, drivers, and nurses, and selects the nearest suitable resources.</p></article>
+                <article class="wf-card"><span>4</span><h3>Station routing</h3><p>The system identifies the responsible station from the patient’s district and that station’s coverage area.</p></article>
+                <article class="wf-card"><span>5</span><h3>Crew assignment</h3><p>An available ambulance, driver, and nurse are assigned. The crew is notified and mission details go to their accounts.</p></article>
+                <article class="wf-card"><span>6</span><h3>Driver mission</h3><p>The driver receives the mission, starts the case, and updates transport status to the scene, then to hospital.</p></article>
+                <article class="wf-card"><span>7</span><h3>Patient care &amp; assessment</h3><p>The nurse records assessment, vital signs, treatment, and clinical notes during the mission.</p></article>
+                <article class="wf-card"><span>8</span><h3>Hospital handover</h3><p>On arrival, the nurse records condition, treatment, and handover. Hospital coordination is done by phone using stored contacts.</p></article>
+                <article class="wf-card"><span>9</span><h3>Case completion</h3><p>After handover is confirmed and information is recorded, the nurse marks the case Completed.</p></article>
+                <article class="wf-card"><span>10</span><h3>Reporting &amp; analytics</h3><p>All case, ambulance, station, and crew data are stored centrally for dashboards and PDF / CSV / JSON reports.</p></article>
+              </div>
+              <div class="wf-bottom">
+                <div>
+                  <h3>System user roles</h3>
+                  <div class="role-row">
+                    <div><b>Administrator</b><p>Users, stations, configuration, reports, oversight</p></div>
+                    <div><b>Dispatcher</b><p>Register, prioritize, assign crew, monitor cases</p></div>
+                    <div><b>Driver</b><p>Receive missions, update status, report progress</p></div>
+                    <div><b>Nurse</b><p>Assessment, treatment, handover, complete the case</p></div>
+                  </div>
+                </div>
+                <div>
+                  <h3>Case types</h3>
+                  <div class="type-row">
+                    <div><b>Emergency</b><p>Life-threatening situations needing immediate response</p></div>
+                    <div><b>Non-emergency</b><p>Planned transport, appointments, discharge</p></div>
+                    <div><b>Referral</b><p>Transfer between healthcare facilities</p></div>
+                  </div>
+                  <p class="wf-note">All three types follow the same case lifecycle from registration to completion.</p>
+                </div>
+              </div>
+            </div>
           </section>
 
           <!-- 10 STATIONS -->
-          <section class="slide slide-figure" data-title="Station coverage" data-notes="Walk the five Mogadishu stations, home districts, and coverage districts. Click the image to enlarge.">
-            <figure class="figure-fill zoomable">
-              <img src="images/aads-station-coverage.jpg" alt="AADS station structure and Mogadishu station coverage map" />
-            </figure>
+          <section class="slide slide-figure" data-title="Station coverage" data-notes="Walk the five Mogadishu stations, home districts, and coverage districts. The full table and map are on this page.">
+            <div class="diagram diagram-stations">
+              <header class="diagram-head">
+                <img src="images/aamin-ambulance-logo.png" alt="Aamin Ambulance" />
+                <div>
+                  <h2>Station structure &amp; coverage</h2>
+                  <p>How the AADS station system works</p>
+                  <small>AADS uses a station-based structure to manage ambulance resources across Mogadishu. Each station covers its home district and nearby districts.</small>
+                </div>
+              </header>
+              <div class="st-steps">
+                <article><span>1</span><h3>Emergency call (999)</h3><p>Dispatcher receives the call and collects location (region, district, area, landmark).</p></article>
+                <article><span>2</span><h3>Identify location</h3><p>The system checks the patient’s district and finds the responsible station and coverage area.</p></article>
+                <article><span>3</span><h3>Assign resources</h3><p>Dispatcher assigns the nearest available ambulance, driver, and nurse from that station.</p></article>
+                <article><span>4</span><h3>Respond &amp; transport</h3><p>The crew reaches the scene, transports the patient to hospital, and updates mission status.</p></article>
+                <article><span>5</span><h3>Complete &amp; report</h3><p>The nurse records handover. The closed case is available for reports and analytics.</p></article>
+              </div>
+              <div class="st-body">
+                <div class="st-table-wrap">
+                  <h3>Stations and their coverage districts</h3>
+                  <table class="st-table">
+                    <thead>
+                      <tr>
+                        <th>Code / name</th>
+                        <th>Region</th>
+                        <th>Home district</th>
+                        <th>Coverage districts</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Central Mogadishu</strong><br />ST001</td>
+                        <td>Banadir</td>
+                        <td>Warta Nabada</td>
+                        <td>Hamar Weyne, Howl-Wadaag, Shangaani</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Eastern Mogadishu</strong><br />ST002</td>
+                        <td>Banadir</td>
+                        <td>Abdiaziz</td>
+                        <td>Bondhere, Karaan, Shibis</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Northeastern Mogadishu</strong><br />ST003</td>
+                        <td>Banadir</td>
+                        <td>Yaqshid</td>
+                        <td>Daarusalam, Gubadley, Huriwaa</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Southern Mogadishu</strong><br />ST004</td>
+                        <td>Banadir</td>
+                        <td>Hodan</td>
+                        <td>Waberi, Hamar Jajab, Wadajir</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Western Mogadishu</strong><br />ST005</td>
+                        <td>Banadir</td>
+                        <td>Dharkenley</td>
+                        <td>Kaxda, Garasbaley, Daynile</td>
+                        <td>Active</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <aside class="st-map">
+                  <h3>Mogadishu station coverage</h3>
+                  <svg viewBox="0 0 280 220" role="img" aria-label="Mogadishu five-station coverage map">
+                    <rect x="1" y="1" width="278" height="218" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+                    <path d="M40 70 C70 20 160 10 230 55 C260 85 255 150 210 190 C150 220 70 200 45 150 C25 115 25 90 40 70Z" fill="#e2e8f0"/>
+                    <ellipse cx="150" cy="95" rx="48" ry="36" fill="#fde68a" stroke="#b45309" stroke-width="1.5"/>
+                    <ellipse cx="205" cy="88" rx="36" ry="30" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.5"/>
+                    <ellipse cx="175" cy="48" rx="34" ry="26" fill="#bbf7d0" stroke="#15803d" stroke-width="1.5"/>
+                    <ellipse cx="145" cy="150" rx="46" ry="32" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+                    <ellipse cx="85" cy="95" rx="38" ry="34" fill="#e9d5ff" stroke="#7e22ce" stroke-width="1.5"/>
+                    <circle cx="150" cy="95" r="4" fill="#111"/><text x="150" y="88" text-anchor="middle" font-size="9" font-weight="700" fill="#111">Central</text>
+                    <circle cx="205" cy="88" r="4" fill="#111"/><text x="205" y="81" text-anchor="middle" font-size="9" font-weight="700" fill="#111">Eastern</text>
+                    <circle cx="175" cy="48" r="4" fill="#111"/><text x="175" y="41" text-anchor="middle" font-size="9" font-weight="700" fill="#111">Northeastern</text>
+                    <circle cx="145" cy="150" r="4" fill="#111"/><text x="145" y="143" text-anchor="middle" font-size="9" font-weight="700" fill="#111">Southern</text>
+                    <circle cx="85" cy="95" r="4" fill="#111"/><text x="85" y="88" text-anchor="middle" font-size="9" font-weight="700" fill="#111">Western</text>
+                  </svg>
+                  <ul>
+                    <li><i class="c-central"></i> Central station</li>
+                    <li><i class="c-east"></i> Eastern station</li>
+                    <li><i class="c-ne"></i> Northeastern station</li>
+                    <li><i class="c-south"></i> Southern station</li>
+                    <li><i class="c-west"></i> Western station</li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
           </section>
 
           <!-- 11 MODULES: Field Operations | Driver -->
