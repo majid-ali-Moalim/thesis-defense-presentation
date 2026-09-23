@@ -4,10 +4,11 @@ Group thesis defense deck for the **Aamin Ambulance Dispatch System (AADS)** —
 
 ## Live site (public)
 
+- **GitHub Pages (use this if Vercel times out):** https://majid-ali-moalim.github.io/thesis-defense-presentation/
 - **Vercel:** https://thesis-defense-presentation.vercel.app
-- **GitHub:** https://github.com/majid-ali-Moalim/thesis-defense-presentation
+- **GitHub repo:** https://github.com/majid-ali-Moalim/thesis-defense-presentation
 
-Anyone can open the Vercel URL. Deployment Protection (SSO login) is turned **off**.
+If `vercel.app` does not load on a local network, open the GitHub Pages URL instead.
 
 ## Open locally
 
